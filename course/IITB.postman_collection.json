@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "ece9e0ef-fcc8-4faf-bcfd-c94752eefcbc",
+		"name": "IITB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26896787"
+	},
+	"item": [
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Maths-3",
+									"type": "text"
+								},
+								{
+									"key": "course_code",
+									"value": "M324",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Maths for Third Semester",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/courses/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/courses/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/courses/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"courses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/courses/4/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"courses",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CourseInstance",
+			"item": [
+				{
+					"name": "CourseDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "course",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2024",
+									"type": "text"
+								},
+								{
+									"key": "semester",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/instances/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instances",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/instances/2024/3",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instances",
+								"2024",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/instances/2024/3/5/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instances",
+								"2024",
+								"3",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete course instance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/instances/2024/3/5/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"instances",
+								"2024",
+								"3",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
